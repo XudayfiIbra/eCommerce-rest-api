@@ -10,5 +10,6 @@ urlpatterns = [
     path('api-branches/', views.api_branches, name='api_branches'),
     path('api-branches/<int:id>/', views.api_branches_info, name='api_branches_info'),
     path('api-employees/', views.api_employees, name='api_employees'),
-    path('api-employees/<int:id>/', views.api_employees_info, name='api_employees_info')
+    path('api-employees/<int:id>/', views.api_employees_info, name='api_employees_info'),
+    # path('products', views.search, name="product_search")
 ]

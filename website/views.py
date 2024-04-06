@@ -7,7 +7,6 @@ from rest_framework.decorators import api_view
 from . serializers import ProductSerializer, CustomerSerializer, BranchesSeializer, EmployeeSerializer
 from . models import Products, Customers, Branches, Employees
 
-
 @api_view(['GET', 'POST'])
 def api_products(request):  
     if request.method == 'GET':
@@ -146,3 +145,18 @@ def api_employees_info(request, id):
     elif request.method == 'DELETE':
         employees.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    
+    
+    
+
+
+# def search(request):
+#     form = ProductSearch(request.GET)
+#     products = Products.objects.all()
+    
+#     if form.is_valid():
+#         query = form.cleaned_data.get('query')
+#         if query:
+#             product = products.filter(name__icontains=query)
+    
+#     return render(request, 'search.html', {'form': form, 'products':products})

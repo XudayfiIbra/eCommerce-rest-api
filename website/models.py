@@ -7,7 +7,7 @@ class Products(models.Model):
     rating = models.IntegerField()
     decsription = models.CharField(max_length=500)
     
-    
+        
 
 class Customers(models.Model):
     first_name = models.CharField(max_length=50)
